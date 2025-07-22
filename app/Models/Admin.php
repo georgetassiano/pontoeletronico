@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -21,17 +21,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'cpf',
-        'position',
-        'birth_date',
-        'cep',
-        'street',
-        'number',
-        'complement',
-        'district',
-        'city',
-        'state',
-        'admin_id',
     ];
 
     /**
@@ -54,7 +43,6 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'birth_date' => 'date',
         ];
     }
 }
